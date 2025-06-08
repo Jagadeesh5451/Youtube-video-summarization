@@ -1,0 +1,290 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.2), rgba(255, 126, 95, 0.2)), url('path/to/background-image.jpg') no-repeat center center fixed; /* Add a background image */
+    background-size: cover; /* Ensure the background covers the entire page */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background: rgba(74, 144, 226, 0.9); /* Semi-transparent to blend with the background */
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: right;
+    width: 100%;
+    position: fixed; /* Keep navbar fixed */
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.5s ease;
+    padding-right: 30px;
+    backdrop-filter: blur(10px); /* Add a blur effect to the navbar */
+}
+
+.navbar a {
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+    font-size: 1.1em;
+}
+
+.navbar a:hover {
+    color: #ffe6e0;
+    transform: scale(1.2);
+    text-shadow: 0 0 10px #fff;
+}
+
+.section {
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.section-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.animated-welcome {
+    font-size: 3em;
+    animation: fadeInGlow 1.5s ease-in-out;
+    color: #4a90e2; /* Match text color with navbar */
+}
+
+.animated-description {
+    font-size: 1.2em;
+    animation: fadeInUp 2s ease-in-out;
+    color: #555; /* Adjust color for contrast */
+    padding-left: 200px;
+    padding-right: 200px;
+}
+/* Glow effects for buttons and elements */
+.action-button {
+    background-color: #ff7e5f;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
+    margin-top: 20px;
+    display: inline-block;
+    box-shadow: 0 0 15px rgba(255, 126, 95, 0.5);
+}
+
+.action-button:hover {
+    background-color: #4a90e2;
+    transform: scale(1.15);
+    box-shadow: 0 0 25px rgba(74, 144, 226, 0.7);
+}
+/* Smooth scrolling effects */
+html {
+    scroll-behavior: smooth;
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: none;
+}
+
+.section.active {
+    display: block;
+    animation: slideIn 1s ease-in-out;
+}
+.spinner {
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    margin: 20px 0;
+}
+
+.spinner i {
+    margin-right: 10px;
+    font-size: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Enhanced thumbnail display */
+#thumbnail-display img {
+    border: 3px solid #ff7e5f;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#thumbnail-display img:hover {
+    transform: scale(1.05) rotate(-5deg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+@keyframes fadeInGlow {
+    0% { opacity: 0; text-shadow: none; }
+    100% { opacity: 1; text-shadow: 0 0 20px rgba(74, 144, 226, 0.8); }
+}
+@keyframes fadeInGlow {
+    0% { opacity: 0; text-shadow: none; }
+    100% { opacity: 1; text-shadow: 0 0 20px rgba(74, 144, 226, 0.8); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.project-title, .team-title , .Contact-title{
+    font-size: 2.5em;
+    color: #4a90e2;
+    animation: glowTitle 1.5s infinite alternate;
+}
+
+@keyframes glowTitle {
+    0% { text-shadow: 0 0 10px rgba(74, 144, 226, 0.5); }
+    100% { text-shadow: 0 0 30px rgba(74, 144, 226, 1); }
+}
+
+.project-description, .team-description {
+    font-size: 1.1em;
+    color: #555;
+    margin: 20px 0;
+}
+
+.input-style {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-style:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 4px 20px rgba(74, 144, 226, 0.3);
+    outline: none;
+}
+
+#thumbnail-display {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#thumbnail-display img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#thumbnail-display img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+#summary-output {
+    text-align: left; /* Align text to the left */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    animation: fadeInUp 1s ease-out;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+#summary-output h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#summary-output ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#summary-output li {
+    margin-bottom: 10px;
+}
+
+#summary-output strong {
+    font-weight: bold;
+}
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.team-member {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #777;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

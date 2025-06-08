@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Video Summarization App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('project')">Project</a>
+        <a href="#" onclick="showSection('team')">Team</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+    </div>
+
+    <!-- Home Section -->
+    <div id="home" class="section active" style="background-image: url('path/to/home-image.jpg');">
+        <h1 class="animated-welcome">Welcome to the Video Summarization App</h1>
+        <p class="animated-description">This easy-to-use tool uses AI to create clear summaries from YouTube video transcripts, 
+            helping you quickly understand lots of information. Whether you're a student needing study help, 
+            a professional looking for quick learning tools, or just someone curious about videos, our app makes it simple.
+            You can easily enter video links and get detailed transcripts in no time. 
+            Plus, our app has a special feature that summarizes the main points, 
+            so you can get the important information right away.</p>
+        <button onclick="scrollToProject()" class="action-button">Get Started</button>
+    </div>
+
+    <!-- Project Section -->
+    <div id="project" class="section" style="background-image: url('path/to/project-image.jpg');">
+        <h1 class="project-title">Video Summarization</h1>
+        <input type="text" id="youtube-link" placeholder="Enter YouTube Video Link" class="input-style">
+        <button onclick="getVideoDetails()" class="action-button">Get Transcript</button>
+        <div id="loading-spinner" class="spinner" style="display: none;">
+            <i class="fas fa-spinner fa-spin"></i> Generating Transcript...
+        </div>
+        <div id="thumbnail-display"></div>
+        <textarea id="transcript-text" placeholder="Transcript will appear here..." rows="10" class="input-style"></textarea>
+        <button onclick="getSummary()" class="action-button">Generate Summary</button>
+        <div id="loading-summary-spinner" class="spinner" style="display: none;">
+            <i class="fas fa-spinner fa-spin"></i> Generating Summary...
+        </div>
+        <div id="summary-output"><h2>Summary:</h2></div>
+    </div>
+
+    <!-- Team Section -->
+    <div id="team" class="section" style="background-image: url('path/to/team-image.jpg');">
+        <h1 class="team-title">Meet Our Team</h1>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="IMG_1145.jpg" alt="RAMADUGU SAIKIRAN">
+                <h3>RAMADUGU SAIKIRAN</h3>
+                <p>99220041330</p>
+            </div>
+            <div class="team-member">
+                <img src="WhatsApp Image 2024-09-20 at 17.15.28_3b729913.jpg" alt="PASUPULETI SREENIVASULU">
+                <h3>PASUPULETI SREENIVASULU</h3>
+                <p>99220041298</p>
+            </div>
+            <div class="team-member">
+                <img src="WhatsApp Image 2024-09-20 at 17.23.59_7ba9f3ad.jpg" alt="RAPALLE LOKESHWAR">
+                <h3>RAPALLE LOKESHWAR</h3>
+                <p>99220041337</p>
+            </div>
+            <div class="team-member">
+                <img src="WhatsApp Image 2024-09-19 at 22.19.12_d9ec1714.jpg" alt="LAKSHMI NARASIMHA">
+                <h3>LAKSHMI NARASIMHA</h3>
+                <p>99220041300</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="section" style="background-image: url('path/to/contact-image.jpg');">
+        <h1 class="Contact-title">Get in Touch</h1>
+        <form id="contact-form">
+            <h2>Reach Out to Us</h2>
+            <ul>
+                <li><i class="fas fa-envelope"></i><a href="abac@xyz.com">abc@yahoo.com</a></li>
+                <li><i class="fab fa-linkedin"></i><a href="www.linkedin.com/in/ramadugu-saikiran-3b4863268" target="_blank">LinkedIn</a></li>
+                <li><i class="fas fa-phone"></i><a href="tel:+91 123-456-7890">+1-123-456-7890</a></li>
+            </ul>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
